@@ -75,8 +75,12 @@ function normalizeQuestion(q) {
   const options = Array.isArray(q.options) ? q.options.map(String) : [];
   const correct = String(q.correct_answer ?? "");
 
-  // explanation opcional
-  const explanation = q.explanation != null ? String(q.explanation) : "";
+  // explanation puede venir como q.explanation o como q.meta.explicacion
+  const meta = (q.meta && typeof q.meta === "object") ? q.meta : {};
+  const explanation =
+    q.explanation != null ? String(q.explanation) :
+    meta.explicacion != null ? String(meta.explicacion) :
+    "";
 
   return {
     id: String(q.id ?? ""),
@@ -147,7 +151,8 @@ function onAnswer() {
   currentAnswered = true;
   answered += 1;
 
-  const isCorrect = selected.value === q.correct_answer;
+  // corrección por texto (robusta a espacios)
+  const isCorrect = selected.value.trim() === q.correct_answer.trim();
   lastWasCorrect = isCorrect;
 
   if (isCorrect) {
