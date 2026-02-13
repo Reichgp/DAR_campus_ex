@@ -2555,6 +2555,193 @@
       "correct_letter": "C",
       "explicacion": "HTTPS utiliza un sistema híbrido: clave asimétrica para identificarse y acordar una clave, y clave simétrica para el intercambio rápido de datos durante la sesión [164, 165]."
     }
+  },
+    {
+    "id": "q151",
+    "type": "single_choice",
+    "question": "El protocolo HTTP:",
+    "options": [
+      "Debe comunicar con una capa de sockets de aplicación.",
+      "Se encuentra por debajo del protocolo FTP.",
+      "Sirve de base al protocolo TCP.",
+      "Sirve de base al protocolo UDP."
+    ],
+    "correct_answer": "Debe comunicar con una capa de sockets de aplicación.",
+    "meta": {
+      "tema": "Tema 10: Protocolo HTTP",
+      "correct_letter": "A",
+      "explicacion": "HTTP es un protocolo de la capa de aplicación que, para establecer comunicación, utiliza sockets que operan sobre el protocolo de transporte TCP [1, 2]."
+    }
+  },
+  {
+    "id": "q152",
+    "type": "single_choice",
+    "question": "Dado el siguiente código HTML: Alternativa A: <x><y><z>… </z></y></x> Alternativa B: <x><y><z>… </x></y></z>. Se puede decir que:",
+    "options": [
+      "Tanto la alternativa A como la B son correctas.",
+      "La alternativa B es correcta porque el anidamiento implica que se cierren primero las tags que primero se abren.",
+      "La alternativa A es correcta porque el anidamiento implica que se cierren las tags en dicho orden.",
+      "No se pueden anidar tags."
+    ],
+    "correct_answer": "La alternativa A es correcta porque el anidamiento implica que se cierren las tags en dicho orden.",
+    "meta": {
+      "tema": "Tema 1: Lenguaje de marcado HTML5",
+      "correct_letter": "C",
+      "explicacion": "El estándar HTML exige un anidamiento estricto basado en el principio LIFO (Last In, First Out); la última etiqueta en abrirse debe ser la primera en cerrarse [3, 4]."
+    }
+  },
+  {
+    "id": "q153",
+    "type": "single_choice",
+    "question": "Sobre la naturaleza de Javascript, es cierto que:",
+    "options": [
+      "Es de bajo nivel.",
+      "Es compilado.",
+      "Es de tipado fuerte.",
+      "Todas las respuestas son falsas."
+    ],
+    "correct_answer": "Todas las respuestas son falsas.",
+    "meta": {
+      "tema": "Tema 3: JavaScript",
+      "correct_letter": "D",
+      "explicacion": "JavaScript es un lenguaje de alto nivel, de tipado débil y es un lenguaje de scripting interpretado por el navegador, no compilado [5, 6]."
+    }
+  },
+  {
+    "id": "q154",
+    "type": "single_choice",
+    "question": "Alguna de las formas de conseguir dinamismo en una web son:",
+    "options": [
+      "Contenido actualizado e interacción con el usuario.",
+      "Motor de base de datos adecuado y basado en componentes.",
+      "Contenido excepcional basado en texto.",
+      "Diseño estático y motor de base de datos adecuado."
+    ],
+    "correct_answer": "Contenido actualizado e interacción con el usuario.",
+    "meta": {
+      "tema": "Tema 3: JavaScript / Tema 10: HTTP",
+      "correct_letter": "A",
+      "explicacion": "Una página web es dinámica cuando su contenido puede cambiar tras la carga y permite al usuario interactuar con los elementos de la interfaz [7, 8]."
+    }
+  },
+  {
+    "id": "q155",
+    "type": "single_choice",
+    "question": "Dado el siguiente código: <p><b>Texto A</b></p> <p><i>Texto B</i></p>, ¿qué resultado se obtiene?",
+    "options": [
+      "Se produce un error porque las etiquetas están mal anidadas.",
+      "El primer párrafo se muestra en negrita y el segundo en cursiva.",
+      "El segundo párrafo se muestra en negrita y el primero en cursiva.",
+      "Ambos párrafos se muestran en negrita."
+    ],
+    "correct_answer": "El primer párrafo se muestra en negrita y el segundo en cursiva.",
+    "meta": {
+      "tema": "Tema 1: Lenguaje de marcado HTML5",
+      "correct_letter": "B",
+      "explicacion": "La etiqueta <b> (bold) define texto en negrita y la etiqueta <i> (italic) define texto en cursiva [9, 10]."
+    }
+  },
+  {
+    "id": "q156",
+    "type": "single_choice",
+    "question": "Respecto a los diferentes tipos de rejillas en Bootstrap:",
+    "options": [
+      "Se pueden combinar según las necesidades del programador.",
+      "Proporcionan diferentes tipos de rendimiento.",
+      "No se pueden combinar a no ser que se recompile el código.",
+      "Ninguna de las respuestas es correcta."
+    ],
+    "correct_answer": "Se pueden combinar según las necesidades del programador.",
+    "meta": {
+      "tema": "Tema 6: Bootstrap",
+      "correct_letter": "A",
+      "explicacion": "Bootstrap permite el uso simultáneo de clases de diferentes tamaños (como col-xs y col-md) para adaptar el diseño a distintas resoluciones [11, 12]."
+    }
+  },
+  {
+    "id": "q157",
+    "type": "single_choice",
+    "question": "¿Qué se consigue con este código? <meta name=“view” content=“with=device-with, initial – scaler=1”>",
+    "options": [
+      "Optimización y claridad.",
+      "Que el código resultante se adapte al tipo de dispositivo.",
+      "Rejilla para poder insertar los elementos.",
+      "El código contiene errores de sintaxis."
+    ],
+    "correct_answer": "El código contiene errores de sintaxis.",
+    "meta": {
+      "tema": "Tema 6: Bootstrap",
+      "correct_letter": "D",
+      "explicacion": "El código tiene múltiples errores: debe ser 'viewport' en lugar de 'view', 'width' en lugar de 'with' y 'scale' en lugar de 'scaler' [13-15]."
+    }
+  },
+  {
+    "id": "q158",
+    "type": "single_choice",
+    "question": "Sobre la Arquitectura basada en componentes, NO es cierto que:",
+    "options": [
+      "Describe una aproximación de ingeniería de software al diseño de un sistema.",
+      "Se enfoca en la descomposición del diseño en componentes funcionales.",
+      "Es un estilo de diseño para aplicaciones compuestas de componentes individuales.",
+      "No pone énfasis en que las interfaces estén bien definidas."
+    ],
+    "correct_answer": "No pone énfasis en que las interfaces estén bien definidas.",
+    "meta": {
+      "tema": "Tema 5: Arquitectura de componentes",
+      "correct_letter": "D",
+      "explicacion": "Es falso porque esta arquitectura precisamente enfatiza que los componentes expongan interfaces de comunicación bien definidas [3, 4]."
+    }
+  },
+  {
+    "id": "q159",
+    "type": "single_choice",
+    "question": "Respecto a SOAP en la arquitectura SOA:",
+    "options": [
+      "Es la tecnología utilizada para invocar servicios descubiertos y comunicarse con el proveedor.",
+      "Significa 'System Object Access Protocol'.",
+      "Es un solo elemento que trabaja de manera individual.",
+      "Solo existe una definición posible de su uso."
+    ],
+    "correct_answer": "Es la tecnología utilizada para invocar servicios descubiertos y comunicarse con el proveedor.",
+    "meta": {
+      "tema": "Tema 9: Arquitectura Orientada a Servicios (SOA)",
+      "correct_letter": "A",
+      "explicacion": "SOAP es el protocolo que permite al consumidor invocar las funcionalidades del servicio web ofrecido por el proveedor [2, 16-18]."
+    }
+  },
+  {
+    "id": "q160",
+    "type": "single_choice",
+    "question": "Las aplicaciones distribuidas de alto rendimiento (HPC):",
+    "options": [
+      "Son aplicaciones que requieren de gran capacidad de cómputo y no pueden ser tratadas por un único superordenador.",
+      "Se ejecutan de manera óptima en un sistema multiprocesador local.",
+      "Tiene alta demanda de CPU pero no de memoria.",
+      "Son independientes del contexto."
+    ],
+    "correct_answer": "Son aplicaciones que requieren de gran capacidad de cómputo y no pueden ser tratadas por un único superordenador.",
+    "meta": {
+      "tema": "Tema 8: Tecnologías Grid",
+      "correct_letter": "A",
+      "explicacion": "Las HPC necesitan tal potencia de procesamiento que requieren el uso coordinado de múltiples recursos distribuidos (Grid o Clusters) [19]."
+    }
+  },
+  {
+    "id": "q161",
+    "type": "single_choice",
+    "question": "En relación con las URLs, es falso que:",
+    "options": [
+      "URI puede entenderse como un localizador.",
+      "URN identifica recursos en la red e indica cómo acceder a ellos.",
+      "Un ejemplo de URL es 'Protocolo://maquina:puerto/directorio/archivo'.",
+      "URL permite recuperar recursos de la web."
+    ],
+    "correct_answer": "URN identifica recursos en la red e indica cómo acceder a ellos.",
+    "meta": {
+      "tema": "Tema 10: Protocolo HTTP",
+      "correct_letter": "B",
+      "explicacion": "Es falso porque la URN identifica el recurso de forma única pero, a diferencia de la URL, no indica su ubicación ni cómo acceder a él [20, 21]."
+    }
   }
 ]
 }
