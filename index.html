@@ -71,4 +71,98 @@
       display:block;
       padding: 12px 12px;
       border: 1px solid var(--border);
-      b
+      border-radius: 12px;
+      margin: 10px 0;
+      cursor: pointer;
+      background: rgba(255,255,255,0.02);
+      transition: background .15s ease, border-color .15s ease, transform .05s ease;
+      user-select: none;
+    }
+    .opt:hover {
+      background: var(--hover);
+      border-color: #3a4250;
+    }
+    .opt:active { transform: translateY(1px); }
+
+    input[type="radio"]{
+      accent-color: var(--accent);
+      transform: translateY(1px);
+    }
+
+    button {
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      cursor: pointer;
+      transition: background .15s ease, border-color .15s ease;
+    }
+    button:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: #3a4250;
+    }
+    button:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+    }
+
+    .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+
+    .ok { color: var(--ok); font-weight: 700; }
+    .bad { color: var(--bad); font-weight: 700; }
+
+    .explain {
+      margin-top: 12px;
+      padding: 12px 12px;
+      border-left: 4px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      color: var(--text);
+      line-height: 1.35;
+      white-space: pre-wrap;
+    }
+
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div>
+      <h1>DAR Test</h1>
+      <!-- Quitamos el “Listo.”: dejamos status vacío por defecto -->
+      <div class="muted small" id="status"></div>
+    </div>
+
+    <div class="row">
+      <button id="btnRestart" type="button" disabled>Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="muted small" id="progress"></div>
+    <h2 id="question"></h2>
+    <div id="options"></div>
+
+    <div class="row" style="margin-top: 12px;">
+      <button id="btnPrev" type="button" disabled>Anterior</button>
+      <button id="btnAnswer" type="button" disabled>Responder</button>
+      <button id="btnNext" type="button" disabled>Siguiente</button>
+    </div>
+
+    <div id="result" style="margin-top: 12px;"></div>
+    <div id="explanation" class="explain" style="display:none;"></div>
+  </div>
+
+  <div class="card">
+    <div class="row" style="justify-content:space-between;">
+      <div><span class="mono">Aciertos:</span> <span id="score">0</span></div>
+      <div><span class="mono">Respondidas:</span> <span id="answered">0</span></div>
+      <div><span class="mono">Total:</span> <span id="total">0</span></div>
+    </div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
